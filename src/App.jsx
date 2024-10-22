@@ -7,8 +7,6 @@ function App() {
 
   useEffect(() => {
     async function getConfigAsync() {
-      const tenantHost = window.location.hostname.split(".")[0];
-      console.log(tenantHost);
       const response = await getConfig();
       setConfig(response.data);
       setIsLoading(false);
